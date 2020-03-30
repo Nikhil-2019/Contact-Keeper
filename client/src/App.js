@@ -9,7 +9,12 @@ import ContactState from './context/contact/ContactState';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import Alerts from './components/layouts/Alerts';
+import setAuthToken from './utils/setAuthToken';
 import './App.css';
+
+if (localStorage.token) {
+	setAuthToken(localStorage.token);
+}
 
 const App = () => {
 	return (
