@@ -5,6 +5,13 @@ const ContactForm = () => {
 
 	const { addContact, current, clearCurrent, updateContact } = contactContext;
 
+	const [ contact, setContact ] = useState({
+		name: '',
+		email: '',
+		phone: '',
+		type: 'personal'
+	});
+
 	useEffect(
 		() => {
 			if (current !== null) {
@@ -20,15 +27,6 @@ const ContactForm = () => {
 		},
 		[ contactContext, current ]
 	);
-
-	const [ contact, setContact ] = useState({
-		name: '',
-		email: '',
-		phone: '',
-		type: 'personal'
-	});
-
-	const { name, email, phone, type } = contact;
 
 	const onChange = (e) =>
 		setContact({
@@ -48,6 +46,9 @@ const ContactForm = () => {
 	const clearAll = () => {
 		clearCurrent();
 	};
+
+	const { name, email, phone, type } = contact;
+
 	return (
 		<form onSubmit={onSubmit}>
 			<h2 className="text-primary">{current ? 'Edit Conatct' : 'Add Contact'}</h2>
