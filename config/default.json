@@ -1,5 +1,4 @@
 {
-    "mongoURI":"mongodb+srv://nikhil131:killScore243@contactkeeper-ulep7.mongodb.net/test?retryWrites=true&w=majority",
-    "jwtSecret" : "secret"
-
+	"mongoURI": "mongodb+srv://nikhil131:killScore243@contactkeeper-ulep7.mongodb.net/test?retryWrites=true&w=majority",
+	"jwtSecret": "secret"
 }
